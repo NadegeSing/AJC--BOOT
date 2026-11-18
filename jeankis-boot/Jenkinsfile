@@ -24,9 +24,11 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
+        stage('Build') {
             steps {
-                sh 'docker compose up -d --build'
+                dir('jeankis-boot'){
+                    sh 'docker compose up -d --build'
+                }
             }
         }
     }
