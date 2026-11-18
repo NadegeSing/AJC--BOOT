@@ -19,7 +19,9 @@ pipeline {
             }
 
             steps {
-                sh 'mvn clean package'
+                dir('jeankis-boot'){
+                    sh 'mvn clean package'
+                }
             }
         }
     }
